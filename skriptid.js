@@ -25,16 +25,16 @@ window.onload = function() {
                     newHeight = newWidth/picAspect
                 }
             }
-            $('.bigPic').css("display", "block").width(newWidth).height(newHeight);
+            $('.bigPic').animate({"opacity": "1"}, 300).css("display", "block").width(newWidth).height(newHeight);
         }
         else {
-            $('.bigPic').css("display", "block").width(orgWidth).height(orgHeight);
+            $('.bigPic').animate({"opacity": "1"}, 300).css("display", "block").width(orgWidth).height(orgHeight);
         }
 
         $('#bigPicInside').attr("src", src)
     });
     $('.bigPic').on('click', function () {
-        $('.bigPic').css("display", "none");
+        $('.bigPic').css({"display": "none", "opacity": "0"});
     });
 
 }
